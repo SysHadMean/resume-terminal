@@ -1,7 +1,7 @@
 FROM mhart/alpine-node:latest as builder
 WORKDIR /data
 COPY . .
-RUN RUN apk add --no-cache make gcc g++ python3
+RUN apk add --no-cache make gcc g++ python3
 RUN npm install -i package.json \
 	&& npm run build
 
