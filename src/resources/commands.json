@@ -1,105 +1,93 @@
 [
-    {
-      "command":"help",
-      "responseType":"list",
-      "value":[
-        "<code>a-propos</code> : Affiche les informations me concernant",
-        "<code>clear</code> : Nettoie le terminal",
-        "<code>experiences</code> : Affiche la liste de mes expériences",
-        "<code>get cv</code> : Télécharge le CV",
-        "<code>help</code> : Affiche l'aide",
-        "<code>hobby</code> : Affiche la liste de mes passes temps",
-        "<code>projets-perso</code> : Affiche la liste de mes projets personnels",
-        "<code>dark/light</code> : Change le thème de la page",
-        "<em>Vous pouvez utiliser la touche TAB afin de compléter une commande</em>",
-        "<em>Vous pouvez retrouver les anciennes commandes avec les flèches haut et bas.</em>"
-      ]
-    },
-    {
-      "command":"a-propos",
-      "responseType":"code",
-      "value":[
-        "{",
-        "   \"nom\" : \"Antoine DAUTRY\",",
-        "   \"poste\" : \"Développeur Fullstack\",",
-        "   \"experience\" : \"2 ans\",",
-        "   \"ville\" : \"Nantes, France\"",
-        "}"
-      ]
-    },
-    {
-      "command":"experiences",
-      "responseType":"table",
-      "headers":[
-        "Date",
-        "Client",
-        "Description",
-        "Tech"
+  {
+    "command":"help",
+    "responseType":"list",
+    "value":[
+      "<code>a-propos</code> : Affiche les informations me concernant",
+      "<code>clear</code> : Nettoie le terminal",
+      "<code>experiences</code> : Affiche la liste de mes expériences",
+      "<code>get cv</code> : Télécharge le CV",
+      "<code>help</code> : Affiche l'aide",
+      "<code>hobby</code> : Affiche la liste de mes passes temps",
+      "<code>projets-perso</code> : Affiche la liste de mes projets personnels",
+      "<code>dark/light</code> : Change le thème de la page",
+      "<em>Vous pouvez utiliser la touche TAB afin de compléter une commande</em>",
+      "<em>Vous pouvez retrouver les anciennes commandes avec les flèches haut et bas.</em>"
+    ]
+  },
+  {
+    "command":"a-propos",
+    "responseType":"code",
+    "value":[
+      "{",
+      "   \"nom\" : \"Paul COLLIN\",",
+      "   \"poste\" : \"Intégrateur Systèmes Linux\",",
+      "   \"experience\" : \"5 ans\",",
+      "   \"ville\" : \"Dijon, France\"",
+      "}"
+    ]
+  },
+  {
+    "command":"experiences",
+    "responseType":"table",
+    "headers":[
+      "Date",
+      "Client",
+      "Description",
+      "Tech"
+    ],
+    "rows":[
+      [
+        "12/2021<br/>Ajd",
+        "Inetum<br/><em>Ministère de l'Education Nationale</em>",
+        "Gestion d'application pour les <br/>différents agents de l'Education Nationale ainsi que les élèves.",
+        "Linux<br/>Spring Boot<br/>Ansible<br/>Python"
       ],
-      "rows":[
-        [
-          "11/2021<br/>Ajd",
-          "Elephant Tech<br/><em>Ministère de la justice</em>",
-          "Mise en place d'une plateforme mettant en relation les<br/>différents acteurs de la réinsertion des anciens détenus.",
-          "Angular 11<br/>Spring Boot<br/>Axelor"
-        ],
-        [
-          "03/2021<br/>11/2021",
-          "SII<br/><em>La Poste</em>",
-          "Outil interne La Poste permettant de répartir les techniciens<br/>sur différentes missions.",
-          "Angular 11<br/>Spring Boot<br/>Spring Batch"
-        ],
-        [
-          "02/2020<br/>03/2021",
-          "SII<br/><em>I.T. Dept</em>",
-          "Maintenance d'un outil interne de feuille de temps.<br/>Développement de plugins pour notre version de ProjeQtor.<br/>Conversion d'une ancienne webapp vers Angular 9.",
-          "Symfony<br/>Angular 9"
-        ],
-        [
-          "11/2019<br/>02/2020",
-          "SII<br/><em>Poste IMMO</em>",
-          "Travail sur un outil de gestion de processus pour gérer l'évolution d'une demande de travaux.",
-          "Symfony 3.4<br/>AngularJS<br/>Processmaker"
-        ]
-      ]
-    },
-    {
-      "command":"hobby",
-      "responseType":"list",
-      "value":[
-        "Musique: Piano, Guitare",
-        "Programmation: JS, Angular, PHP",
-        "Autre: Cinéma, Aéronautique, Photographie"
-      ]
-    },
-    {
-      "command":"projets-perso",
-      "responseType":"table",
-      "headers":[
-        "Nom",
-        "Description",
-        "Tech",
-        "Liens"
+      [
+        "11/2020<br/>11/2021",
+        "AIRRIA<br/><em>La Poste</em>",
+        "Maintien en condition opérationnelle d'application métier sur système linux.",
+        "Linux<br/>Spring Boot<br/>Ansible"
       ],
-      "rows":[
-        [
-          "Chartsfinder - Web<br/>(2021)",
-          "Application web pour trouver rapidement des cartes aéronautiques. Une version C# existait déjà mais j'ai préféré la mettre à jour avec une version web qui est plus simple d'utilisation.",
-          "Angular 11, PHP 7.4",
-          "<a href=\"https://chartsfinder.adautry.fr\" target=\"blank\">Lien</a>"
-        ],
-        [
-          "Personal website<br/>(2021)",
-          "Site web personnel me permettant de montrer mes projets et de déployer une nouvelle version du logiciel.<br/>Il y a même un jeu caché...",
-          "Symfony 5",
-          "<a href=\"https://adautry.fr\" target=\"blank\">Lien</a>"
-        ],
-        [
-          "Chartsfinder - Software<br/>(2020)",
-          "Logiciel permettant de récupérer rapidement les cartes aéronautiques.",
-          "C# WPF",
-          "<a href=\"https://adautry.fr/software/chartsfinder\" target=\"blank\">Lien</a>"
-        ]
+      [
+        "02/2020<br/>03/2021",
+        "<em>Maincare Solutions</em>",
+        "Déploiement applicatif et administration de serveurs (CentOS/RedHat) en environnement critique.<br/>Exploitation et supervision 24/7",
+        "Linux<br/>WildFly 8"
+      ],
+      [
+        "11/2019<br/>02/2020",
+        "GFI Informatique<br/><em>GIP Cpage</em>",
+        "Maintien en condition opérationnelle d'application métier sur système linux.<br/>ETL pour harminisation inter-systèmes",
+        "Linux<br/>Oracle<br/>Java<br/>HL7"
       ]
-    }
+    ]
+  },
+  {
+    "command":"hobby",
+    "responseType":"list",
+    "value":[
+      "Musique: Sonorisation salle pour concert musique amplifiée",
+      "Programmation: JS, C++, Python, Golang",
+      "Autre: Photographie, Arts Martiaux, Jeu de rôle Papier, Jeux de plateaux"
+    ]
+  },
+  {
+    "command":"projets-perso",
+    "responseType":"table",
+    "headers":[
+      "Nom",
+      "Description",
+      "Tech",
+      "Liens"
+    ],
+    "rows":[
+      [
+        "Dicecord<br/>(2020)",
+        "Bot discord pour gestion multinodale de salon de jeu de rôle avec prise en charge et archivage des différents lancés de dés",
+        "NodeJS",
+        "<a href=\"https://github.com/SysHadMean/dicecord\" target=\"blank\">Lien du projet Github</a>"
+      ],
+    ]
+  }
 ]

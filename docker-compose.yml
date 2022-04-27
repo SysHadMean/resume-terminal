@@ -1,11 +1,23 @@
 version: '3.8'
 services:
   resume-terminal:
-    build:
-        context: .
-        dockerfile: Dockerfile
+    #build:
+    #    context: .
+    #    dockerfile: Dockerfile
     # Not on DockerHub
-    image: antoine1003/resume-terminal
+    image: resume-terminal:latest
     container_name: resume-terminal
     ports:
-      - '80:80'
+      - '9093:80'
+    networks:
+      - proxy
+      - default
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=proxy"
+      - "traefik.http.routers.resume-terminal.entrypoints=websecure"
+      - "traefik.http.routers.resume-terminal.rule=Host(`resume.pcollin.fr`)"
+networks:
+  proxy:
+    external: true
+
