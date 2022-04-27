@@ -1,6 +1,7 @@
-FROM mhart/alpine-node:latest as builder
+FROM debian:bullseye-slim as builder
 WORKDIR /data
 COPY . .
+RUN apt update && apt install -y npm
 RUN npm install -i package.json \
 	&& npm run build
 
